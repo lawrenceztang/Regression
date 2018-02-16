@@ -21,6 +21,7 @@ public class Display extends Canvas{
         catch (Exception e) {
 
         }
+        //hi
 
         setBackground(Color.WHITE);
         Regression regression = new Regression(trainingDataX, trainingDataY, stepSize);
