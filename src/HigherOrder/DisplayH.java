@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Display extends Canvas{
+public class DisplayH extends Canvas{
 
     static Random rand;
     static ArrayList<ArrayList<Double>> trainingData;
@@ -27,14 +27,14 @@ public class Display extends Canvas{
         }
 
         setBackground(Color.WHITE);
-        Regression regression = new Regression(trainingData, output, stepSize, 3);
+        RegressionH regression = new RegressionH(trainingData, output, stepSize, 3);
 
         for(int p = 0; p < numIterations; p++) {
             g.clearRect(0, 0, boxSize, boxSize);
             g.setColor(Color.RED);
 
             for(int y = 0; y < boxSize; y++) {
-                g.drawOval(y, (int) regression.getYPredict(y), 2, 2);
+                g.drawOval(y, boxSize - (int) regression.getYPredict(y), 2, 2);
             }
 
             g.setColor(Color.BLACK);
@@ -77,7 +77,7 @@ public class Display extends Canvas{
     }
 
     public static void startDisplay() {
-        Linear.Display m = new Linear.Display();
+        DisplayH m = new DisplayH();
         JFrame f = new JFrame();
         f.add(m);
         f.setSize(boxSize,boxSize);

@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Regression {
+public class RegressionH {
 
     Random rand = new Random();
     double stepSize;
@@ -16,12 +16,13 @@ public class Regression {
     ArrayList<Double> output;
     double intercept;
 
-    public Regression(ArrayList<ArrayList<Double>> trainingData, ArrayList<Double> output, double stepSize, int degreePolynomial) {
+    public RegressionH(ArrayList<ArrayList<Double>> trainingData, ArrayList<Double> output, double stepSize, int degreePolynomial) {
         this.trainingData = trainingData;
         attributeNum = trainingData.get(0).size();
         numExamples = trainingData.size();
         this.degreePolynomial = degreePolynomial;
         this.output = output;
+        weights = new ArrayList<>();
 
         for (int i = 0; i < attributeNum; i++) {
             weights.add(new ArrayList<>());
