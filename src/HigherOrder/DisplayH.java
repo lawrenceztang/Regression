@@ -14,9 +14,10 @@ public class DisplayH extends Canvas{
     static ArrayList<Double> output;
     static int numPoints = 20;
     static double stepSize = .08;
-    static int numIterations = 50;
+    static int numIterations = 100000;
     static int boxSize = 800;
     static int numAttributes = 1;
+    static int degreePoly = 1;
 
     public void paint(Graphics g) {
         try {
@@ -27,7 +28,7 @@ public class DisplayH extends Canvas{
         }
 
         setBackground(Color.WHITE);
-        RegressionH regression = new RegressionH(trainingData, output, stepSize, 3);
+        RegressionH regression = new RegressionH(trainingData, output, stepSize, degreePoly);
 
         for(int p = 0; p < numIterations; p++) {
             g.clearRect(0, 0, boxSize, boxSize);
@@ -46,7 +47,7 @@ public class DisplayH extends Canvas{
             regression.takeStep();
 
             try {
-                TimeUnit.MILLISECONDS.sleep(500);
+                TimeUnit.MILLISECONDS.sleep(1000);
             }
             catch (Exception e) {
 
