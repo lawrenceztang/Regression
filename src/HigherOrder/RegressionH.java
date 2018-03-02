@@ -15,6 +15,7 @@ public class RegressionH {
     int degreePolynomial;
     ArrayList<Double> output;
     double intercept;
+    double weightRate = .001;
 
     public RegressionH(ArrayList<ArrayList<Double>> trainingData, ArrayList<Double> output, double stepSize, int degreePolynomial) {
         this.trainingData = trainingData;
@@ -26,7 +27,7 @@ public class RegressionH {
 
         for (int i = 0; i < attributeNum; i++) {
             weights.add(new ArrayList<>());
-            for (int u = 0; u < degreePolynomial; u++) {
+            for (int u = 0; u <= degreePolynomial; u++) {
                 weights.get(i).add((double) rand.nextInt(5));
             }
         }
@@ -36,15 +37,17 @@ public class RegressionH {
 
     public void takeStep() {
         for (int i = 0; i < attributeNum; i++) {
-            for (int p = 0; p < degreePolynomial; p++) {
+            for (int p = 0; p <= degreePolynomial; p++) {
+                weights.get(i).set(p, weights.get(i).get(p) - .001);
                 double previousLoss = getLoss();
-                weights.get(i).set(p, weights.get(i).get(p) + stepSize);
-                if (getLoss() > previousLoss) {
-                    weights.get(i).set(p, weights.get(i).get(p) - stepSize * 2);
-                }
+                weights.get(i).set(p, weights.get(i).get(p) + .002);
+                double gradientMToLoss = (getLoss() - previousLoss) / .002;
+                weights.get(i).set(p, weigghts.get(i).get(p) - .001);
+                weights.get(i).set(p,  weights.get(i).get(p) - weightRate * gradientMToLoss);
+
             }
         }
-
+        System.out.println("hi");
     }
 
     public double getLoss() {
@@ -69,7 +72,7 @@ public class RegressionH {
 
     public double getYPredict(double input) {
         int yCoordPredict = 0;
-            for(int i = 0; i < degreePolynomial; i++) {
+            for(int i = 0; i <= degreePolynomial; i++) {
                 yCoordPredict += weights.get(0).get(i) * Math.pow(input, i);
             }
         return yCoordPredict;
