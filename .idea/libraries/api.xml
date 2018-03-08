@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="api">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/com.amd.aparapi/doc/api" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/com.amd.aparapi/src/java" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/com.amd.aparapi/src/test" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/correlation-matrix/src/java" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/correlation-matrix/src/test" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/effects/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/javaonedemo/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/movie/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/nbody/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/examples/oopnbody/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/add/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/blackscholes/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/configuration/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/convolution/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/extension/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/info/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/life/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/mandel/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/mdarray/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/median/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/progress/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/samples/squares/src" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/test/codegen/src/java" />
+      <root url="file://$USER_HOME$/Documents/Java Libraries/aparapi/test/runtime/src/java" />
+    </SOURCES>
+  </library>
+</component>

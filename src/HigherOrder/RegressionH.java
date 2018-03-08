@@ -42,7 +42,7 @@ public class RegressionH {
                 double previousLoss = getLoss();
                 weights.get(i).set(p, weights.get(i).get(p) + .002);
                 double gradientMToLoss = (getLoss() - previousLoss) / .002;
-                weights.get(i).set(p, weigghts.get(i).get(p) - .001);
+                weights.get(i).set(p, weights.get(i).get(p) - .001);
                 weights.get(i).set(p,  weights.get(i).get(p) - weightRate * gradientMToLoss);
 
             }
